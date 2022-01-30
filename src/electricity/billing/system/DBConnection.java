@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+/*create connection with MySQL database*/
 package electricity.billing.system;
 
 import java.sql.*;  
@@ -12,9 +9,9 @@ public class DBConnection{
     public DBConnection(){  
         try{  
             Class.forName("com.mysql.cj.jdbc.Driver");  
+             //ebsystem is database name, root is username and no password   
             c =DriverManager.getConnection("jdbc:mysql://localhost:3306/ebsystem","root","");    
             s =c.createStatement();  
-            
            
         }catch(Exception e){ 
             System.out.println(e);
